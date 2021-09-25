@@ -13,7 +13,7 @@ class ProductReviewsController < ApplicationController
 
   # GET /product_reviews/new
   def new
-    @product_review = ProductReview.new
+    @product_reviews = @product.product_reviews.build
   end
 
   # GET /product_reviews/1/edit
