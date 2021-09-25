@@ -4,7 +4,7 @@ class ProductReviewsController < ApplicationController
 
   # GET /product_reviews or /product_reviews.json
   def index
-    @product_reviews = @product.product_reviews
+    @product_review = @product.product_reviews
   end
 
   # GET /product_reviews/1 or /product_reviews/1.json
@@ -13,7 +13,7 @@ class ProductReviewsController < ApplicationController
 
   # GET /product_reviews/new
   def new
-    @product_reviews = @product.product_reviews.build
+    @product_review = @product.product_reviews.build
   end
 
   # GET /product_reviews/1/edit
