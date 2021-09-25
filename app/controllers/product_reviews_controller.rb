@@ -22,11 +22,11 @@ class ProductReviewsController < ApplicationController
 
   # POST /product_reviews or /product_reviews.json
   def create
-    @product_review = ProductReview.new(product_review_params)
+    @product_review = @product.product_reviews.build(product_review_params)
 
     respond_to do |format|
       if @product_review.save
-        format.html { redirect_to @product_review, notice: "Product review was successfully created." }
+        format.html { redirect_to products_path(@product), notice: "Product review was successfully created." }
         format.json { render :show, status: :created, location: @product_review }
       else
         format.html { render :new, status: :unprocessable_entity }
