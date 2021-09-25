@@ -1,8 +1,12 @@
 .products {
-  @import 'stars/product_stars';
+  @import 'product_stars';
   
   .product {
     padding-bottom: 2rem;
+  }
+
+  .product-bottom {
+    display: flex;
   }
 
   .product_average_rating {

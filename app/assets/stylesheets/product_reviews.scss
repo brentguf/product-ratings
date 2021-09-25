@@ -1,5 +1,5 @@
 .product_reviews {
-  @import 'stars/product_review_stars';
+  @import 'product_stars';
 
   .field {
     margin-bottom: 1rem;
@@ -13,5 +13,9 @@
     font-size: medium;
     margin-bottom: 1.5rem;
     border: none;
+  }
+
+  #product_review_rating:hover {
+    cursor: pointer;
   }
 }
