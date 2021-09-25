@@ -1,5 +1,6 @@
 class ProductReviewsController < ApplicationController
   before_action :set_product_review, only: %i[ show edit update destroy ]
+  before_action :set_product
 
   # GET /product_reviews or /product_reviews.json
   def index
@@ -57,6 +58,9 @@ class ProductReviewsController < ApplicationController
   end
 
   private
+    def set_product
+      @product = Product.find(params[:product_id])
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_product_review
       @product_review = ProductReview.find(params[:id])
