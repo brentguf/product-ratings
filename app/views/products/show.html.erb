@@ -3,6 +3,13 @@
 <h1>
   <%= @product.title %>
 </h1>
+<p>
+  <% if @product.average_rating.nan? %>
+    No reviews yet.
+  <% else %>
+    <%= @product.average_rating %>
+  <% end %>
+</p>
 
 <%= link_to 'Add review', new_product_product_review_path(@product) %>
 
