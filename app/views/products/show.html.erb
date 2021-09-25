@@ -13,4 +13,16 @@
 
 <%= link_to 'Add review', new_product_product_review_path(@product) %>
 
+<% if @product.product_reviews.size > 0 %>
+  <h2>Reviews</h2>
+  <ul>
+    <% @product.product_reviews.each do |product_review| %>
+      <li>
+        <strong><%= product_review.rating %></strong>, 
+        <%= product_review.description %> 
+      </li>  
+    <% end %>
+  </ul>
+<% end %>
+
 <%= link_to 'Back', products_path %>
