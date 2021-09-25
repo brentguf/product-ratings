@@ -1,9 +1,6 @@
 .product_reviews {
   @import 'product_stars';
 
-  .field {
-    margin-bottom: 1rem;
-  }
   .product-review-form-label {
     font-size: medium;
     margin-bottom: 1.5rem;
@@ -11,7 +8,6 @@
   }
   .product-review-form-text-area {
     font-size: medium;
-    margin-bottom: 1.5rem;
     border: none;
     resize: none;
     font-family: inherit;
@@ -19,6 +15,10 @@
     &::placeholder {
       color: #929292;
     }
+  }
+
+  .rating-field {
+    margin-bottom: 1.5rem;
   }
 
   #product_review_rating:hover {
