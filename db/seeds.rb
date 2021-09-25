@@ -1,4 +1,4 @@
-ProductReview.delete_all
+Product.delete_all
 
 product1 = Product.create!(
   title: 'My book'
