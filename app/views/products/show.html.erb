@@ -6,11 +6,14 @@
   </h1>
   <div class="product-bottom">
     <p>
-      <% if @product.average_rating.nan? %>
-        No reviews yet.
-      <% else %>
-        <div class="product_average_rating">
-          <span class="product_average_rating_number"><%= @product.average_rating %></span>
+    <div class="product_average_rating">
+          <span class="product_average_rating_number">
+            <% if @product.average_rating.nan? %>
+              No reviews yet.
+            <% else %>
+              <%= @product.average_rating %>
+            <% end %>
+          </span>
           <label class="rating-label">
             <input
               class="rating"
@@ -23,7 +26,6 @@
             >
           </label>
         </div>
-      <% end %>
     </p>
     <%= link_to 'Add review', new_product_product_review_path(@product), class: 'new-review-btn primary-btn' %>
   </div>
