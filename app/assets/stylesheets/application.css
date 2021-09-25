@@ -29,6 +29,11 @@ ul {
   padding: 0;
 }
 
+a:hover {
+  background-color:white;
+  color: black
+}
+
 a.primary-btn {
   text-decoration: none;
 }
@@ -49,4 +54,9 @@ a.primary-btn:hover {
   padding: .75rem 1.5rem;
   font-weight: bold;
   box-shadow: 0 2px 4px -3px grey
+}
+
+.back-link {
+  display: block;
+  margin-top: 60px;
 }
