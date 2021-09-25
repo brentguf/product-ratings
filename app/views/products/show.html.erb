@@ -1,53 +1,58 @@
 <p id="notice"><%= notice %></p>
 
-<h1>
-  <%= @product.title %>
-</h1>
-<p>
-  <% if @product.average_rating.nan? %>
-    No reviews yet.
-  <% else %>
-    <div class="product_average_rating">
-      <span class="product_average_rating_number"><%= @product.average_rating %></span>
-      <label class="rating-label">
-        <input
-          class="rating"
-          max="5"
-          readonly
-          step="0.01"
-          style="--value:<%= @product.average_rating %>"
-          type="range"
-          value="<%= @product.average_rating %>"
-        >
-      </label>
-    </div>
-  <% end %>
-</p>
-
-<%= link_to 'Add review', new_product_product_review_path(@product) %>
-
-<% if @product.product_reviews.size > 0 %>
-  <h2>Reviews</h2>
-  <ul>
-    <% @product.product_reviews.each do |product_review| %>
-      <li class="product_review">
+<div class="product">
+  <h1>
+    <%= @product.title %>
+  </h1>
+  <p>
+    <% if @product.average_rating.nan? %>
+      No reviews yet.
+    <% else %>
+      <div class="product_average_rating">
+        <span class="product_average_rating_number"><%= @product.average_rating %></span>
         <label class="rating-label">
           <input
             class="rating"
             max="5"
             readonly
             step="0.01"
-            style="--value:<%= product_review.rating %>"
+            style="--value:<%= @product.average_rating %>"
             type="range"
-            value="<%= product_review.rating %>">
+            value="<%= @product.average_rating %>"
+          >
         </label>
-        <span>
-          <strong><%= product_review.rating %></strong>, 
-          <%= product_review.description %> 
-        </span>
-      </li>  
+      </div>
     <% end %>
-  </ul>
+  </p>
+  <%= link_to 'Add review', new_product_product_review_path(@product) %>
+</div>
+
+<hr class="hr_product" />
+
+<% if @product.product_reviews.size > 0 %>
+  <div class="reviews">
+    <h2>Reviews</h2>
+    <ul>
+      <% @product.product_reviews.each do |product_review| %>
+        <li class="product_review">
+          <label class="rating-label">
+            <input
+              class="rating"
+              max="5"
+              readonly
+              step="0.01"
+              style="--value:<%= product_review.rating %>"
+              type="range"
+              value="<%= product_review.rating %>">
+          </label>
+          <span>
+            <strong><%= product_review.rating %></strong>, 
+            <%= product_review.description %> 
+          </span>
+        </li>  
+      <% end %>
+    </ul>
+</div>
 <% end %>
 
 <%= link_to 'Back', products_path %>

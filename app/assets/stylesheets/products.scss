@@ -9,6 +9,10 @@
     list-style: none;
     padding: 0;
   }
+  
+  .product {
+    padding-bottom: 2rem;
+  }
 
   .product_average_rating {
     font-size: x-large;
@@ -18,6 +22,15 @@
     .product_average_rating_number {
       margin-right: .5rem;
     }
+  }
+
+  .hr_product {
+    border: none;
+    border-top: 1px solid #B9B9B9;
+  }
+
+  .reviews {
+    padding-top: .75rem;
   }
 
   .product_review {
