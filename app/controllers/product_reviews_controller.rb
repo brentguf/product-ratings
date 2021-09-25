@@ -52,7 +52,7 @@ class ProductReviewsController < ApplicationController
   def destroy
     @product_review.destroy
     respond_to do |format|
-      format.html { redirect_to product_reviews_url, notice: "Product review was successfully destroyed." }
+      format.html { redirect_to product_path(@product), notice: "Product review was successfully destroyed." }
       format.json { head :no_content }
     end
   end
