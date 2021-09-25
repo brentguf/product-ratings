@@ -9,10 +9,16 @@
     margin-bottom: 1.5rem;
     font-weight: bolder;
   }
-  .product-review-form-input {
+  .product-review-form-text-area {
     font-size: medium;
     margin-bottom: 1.5rem;
     border: none;
+    resize: none;
+    font-family: inherit;
+
+    &::placeholder {
+      color: #929292;
+    }
   }
 
   #product_review_rating:hover {
