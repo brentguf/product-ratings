@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :rating %>
+    <%= form.label :rating, class: 'product-review-form-label' %>
     <input
       id="product_review_rating"
       name="product_review[rating]"
@@ -25,8 +25,9 @@
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.label :description, 'Review', class: 'product-review-form-label' %>
+    <%= form.text_field :description, class: 'product-review-form-input',
+        placeholder: "Start typing..." %>
   </div>
 
   <div class="actions">

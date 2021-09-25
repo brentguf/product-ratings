@@ -15,5 +15,15 @@
  */
 
  main {
-  padding: 2rem 8rem;
+   padding: 2rem 8rem;
  }
+
+ h1 {
+   font-size: xx-large;
+   margin-bottom: 2.5rem;
+ }
+
+ul {
+  list-style: none;
+  padding: 0;
+}

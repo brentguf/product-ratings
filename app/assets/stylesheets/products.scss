@@ -1,15 +1,6 @@
 .products {
   @import 'stars/product_stars';
   
-  h1 {
-    font-size: xx-large;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
   .product {
     padding-bottom: 2rem;
   }
