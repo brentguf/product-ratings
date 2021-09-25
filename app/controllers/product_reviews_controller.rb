@@ -63,7 +63,7 @@ class ProductReviewsController < ApplicationController
     end
     # Use callbacks to share common setup or constraints between actions.
     def set_product_review
-      @product_review = ProductReview.find(params[:id])
+      @product_review = @product.product_reviews.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
