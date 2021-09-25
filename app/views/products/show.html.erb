@@ -47,10 +47,10 @@
               type="range"
               value="<%= product_review.rating %>">
           </label>
-          <span>
+          <div>
             <strong><%= product_review.rating %></strong>, 
-            <%= product_review.description %> 
-          </span>
+            <span class="product_review_description"><%= product_review.description %><span>
+          </div>
         </li>  
       <% end %>
     </ul>
