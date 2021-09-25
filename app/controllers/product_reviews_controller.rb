@@ -26,7 +26,7 @@ class ProductReviewsController < ApplicationController
 
     respond_to do |format|
       if @product_review.save
-        format.html { redirect_to products_path(@product), notice: "Product review was successfully created." }
+        format.html { redirect_to product_path(@product), notice: "Product review was successfully created." }
         format.json { render :show, status: :created, location: @product_review }
       else
         format.html { render :new, status: :unprocessable_entity }
