@@ -39,7 +39,7 @@ class ProductReviewsController < ApplicationController
   def update
     respond_to do |format|
       if @product_review.update(product_review_params)
-        format.html { redirect_to @product_review, notice: "Product review was successfully updated." }
+        format.html { redirect_to product_path(@product), notice: "Product review was successfully updated." }
         format.json { render :show, status: :ok, location: @product_review }
       else
         format.html { render :edit, status: :unprocessable_entity }
