@@ -5,16 +5,27 @@
     font-size: xx-large;
   }
 
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
   .product_average_rating {
     font-size: x-large;
     display: flex;
     align-items: center;
 
     .product_average_rating_number {
-        margin-right: .5rem;
+      margin-right: .5rem;
     }
-    label {
-        margin: 0;
+  }
+
+  .product_review {
+    display: flex;
+    align-items: center;
+
+    .rating-label {
+      margin-right: .75rem;
     }
   }
 }

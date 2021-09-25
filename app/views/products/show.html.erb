@@ -30,7 +30,7 @@
   <h2>Reviews</h2>
   <ul>
     <% @product.product_reviews.each do |product_review| %>
-      <li>
+      <li class="product_review">
         <label class="rating-label">
           <input
             class="rating"
@@ -41,8 +41,10 @@
             type="range"
             value="<%= product_review.rating %>">
         </label>
-        <strong><%= product_review.rating %></strong>, 
-        <%= product_review.description %> 
+        <span>
+          <strong><%= product_review.rating %></strong>, 
+          <%= product_review.description %> 
+        </span>
       </li>  
     <% end %>
   </ul>
